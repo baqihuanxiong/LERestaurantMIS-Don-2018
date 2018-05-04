@@ -2,10 +2,23 @@ import random
 from deap import base
 from deap import creator
 from deap import tools
+import numpy as np
+import pandas as pd
+
+
+data = pd.read_excel('test.xlsx')
+n = len(data)
+AEQ = [tuple([int(d) for d in s.split(',')[:-1]]) for s in data["可加工工位"]]
+E = [data.ix[i, 2] + max(data.ix[data.ix[:, 1] == data.ix[i, 1], 3]) for i in range(n)]
 
 
 def evaluateInd(individual):
-    return sum(individual),
+    X = np.array(individual)
+    F = np.zeros(n)
+    for i in range(n):
+        F[i] = max(max(F[X == X[i]]), data.ix[i, 2]) + data.ix[i, 3]
+    print(max(F))
+    return sum([F[i] - E[i] for i in range(n) if F[i] > E[i]]),
 
 
 def initCustom(container, aeq):
@@ -30,8 +43,6 @@ def mutCustom(individual, aeq, indpb):
             individual[i] = aeq[i][random.randint(0, len(aeq[i])-1)]
     return individual,
 
-
-AEQ = [(2, 3, 5, 6, 9), (1, 2, 3, 4), (1, 4, 5), (6, 7, 9), (1, 5, 6, 7, 9)]
 
 creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
 creator.create("Individual", list, fitness=creator.FitnessMin)
@@ -82,4 +93,7 @@ while g < 100:
 
 best_ind = tools.selBest(pop, k=1)[0]
 print("Best individual is %s, %s" % (best_ind, best_ind.fitness.values))
+
+rt = [e[random.randint(0, len(e) - 1)] for e in AEQ]
+print("Distribute random %s, %s" % (rt, evaluateInd(rt)))
 
