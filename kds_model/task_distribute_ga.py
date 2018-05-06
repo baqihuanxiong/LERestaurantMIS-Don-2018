@@ -1,8 +1,8 @@
 import random
+import time
 from deap import base
 from deap import creator
 from deap import tools
-import numpy as np
 import pandas as pd
 
 
@@ -10,14 +10,14 @@ data = pd.read_excel('test.xlsx')
 n = len(data)
 AEQ = [tuple([int(d) for d in s.split(',')[:-1]]) for s in data["可加工工位"]]
 E = [data.ix[i, 2] + max(data.ix[data.ix[:, 1] == data.ix[i, 1], 3]) for i in range(n)]
+T1 = list(data.ix[:, 2])
+T2 = list(data.ix[:, 3])
 
 
 def evaluateInd(individual):
-    X = np.array(individual)
-    F = np.zeros(n)
+    F = [0] * n
     for i in range(n):
-        F[i] = max(max(F[X == X[i]]), data.ix[i, 2]) + data.ix[i, 3]
-    print(max(F))
+        F[i] = max(max([F[j] for j, x in enumerate(individual) if x == individual[i]]), T1[i]) + T2[i]
     return sum([F[i] - E[i] for i in range(n) if F[i] > E[i]]),
 
 
@@ -65,6 +65,7 @@ for ind, fit in zip(pop, fitness):
     ind.fitness.values = fit
 fits = [ind.fitness.values[0] for ind in pop]
 
+now = time.time()
 g = 0
 while g < 100:
     g += 1
@@ -90,6 +91,8 @@ while g < 100:
     pop[:] = offspring
     fits = [ind.fitness.values[0] for ind in pop]
     print("%s: %s" % (g, min(fits)))
+
+print("Time Consumption is %s s" % (time.time() - now))
 
 best_ind = tools.selBest(pop, k=1)[0]
 print("Best individual is %s, %s" % (best_ind, best_ind.fitness.values))
