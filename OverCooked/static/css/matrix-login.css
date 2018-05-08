@@ -55,7 +55,7 @@ body {background-color:#2E363F; padding: 0; margin-top:10%;}
 #loginbox .controls{ padding:0 0px;}
 #loginbox .control-group { padding:10px 0px; margin-bottom:0px;}
 #loginbox .control-group2 { padding:0px 0px 20px 0px; margin-bottom:0px;}
-.form-actions {padding:0px 0px 20px 0px; margin-bottom:0px; background:none; border-top: none; border-bottom: 1px solid #616161;}
+.form-actions {margin-top: 0px; margin-bottom: 0px; background:none; border-top: none; border-bottom: 1px solid #616161;}
 .form-vertical{margin-top: 0px; margin-bottom: 0px; background:#616161; border-top: 1px solid #616161;}
 #loginbox .normal_text{ padding:10px 10px; text-align:center; font-size:14px; line-height:30px; background:#2E363F; color:#B2DFEE; }
 
