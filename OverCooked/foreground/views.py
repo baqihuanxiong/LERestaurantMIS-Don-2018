@@ -3,47 +3,36 @@ from django.shortcuts import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
 from . import models
-from django import forms
 
 
-class OrderForm(forms.ModelForm):
-    class Meta:
-        model = models.Order
-        fields = ['type', 'price', 'guest', 'phone', 'address']
-
-    def clean_type(self):
-        atype = self.data['type']
-        aguest = self.data['guest']
-        aphone = self.data['phone']
-        aaddress = self.data['address']
-        if (atype == '配送' and aguest and aphone and aaddress) or atype == '打包' or atype == '堂吃':
-            return atype
-        else:
-            raise forms.ValidationError('订单非法', code='incomplete delivery information')
+def check_order(order):
+    fields = ['type', 'price', 'foods', 'marks', 'guest', 'phone', 'address']
+    for field in fields:
+        if field not in order.keys():
+            return False
+    if order['type'] == '配送' and not (order['guest'] and order['phone'] and order['address']):
+        return False
+    foods_ids = [food.id for food in models.Food.objects.all()]
+    for food in order['foods']:
+        if food not in foods_ids:
+            return False
+    if len(order['foods']) == 0 or len(order['foods']) != len(order['marks']):
+        return False
+    return True
 
 
 @csrf_exempt
 def ordering(request):
     if request.method == 'POST':
         order = json.loads(request.body.decode('utf-8'))
-        order_form_json = {}
-        for field in OrderForm.Meta.fields:
-            if field not in order.keys():
-                return HttpResponse('{"status": "failure", "msg": "订单不完整"}', content_type='application/json')
-            else:
-                order_form_json[field] = order[field]
-        if 'foods' not in order.keys() or 'remarks' not in order.keys() or len(order['foods']) != len(order['remarks']):
-            return HttpResponse('{"status": "failure", "msg": "订单不完整"}', content_type='application/json')
-        else:
-            foods_ids = [food.id for food in models.Food.objects.all()]
-            for food in order['foods']:
-                if food not in foods_ids:
-                    return HttpResponse('{"status": "failure", "msg": "非法订单菜品"}', content_type='application/json')
-        order_form = OrderForm(order_form_json)
-        if order_form.is_valid():
-            order_form.save(commit=True)
-            detail_list = []
-
+        if check_order(order):
+            order_obj = models.Order.objects.create(type=order['type'], price=order['price'], guest=order['guest'],
+                                                    phone=order['phone'], address=order['address'])
+            detail_list = [models.Detail(order=order_obj, food=models.Food.objects.get(id=order['foods'][i]),
+                                         mark=order['marks'][i], state='未分配') for i in range(len(order['foods']))]
+            models.Detail.objects.bulk_create(detail_list)
             return HttpResponse('{"status": "success"}', content_type='application/json')
         else:
-            return HttpResponse('{"status": "failure", "msg": "订单非法"}', content_type='application/json')
+            return HttpResponse('{"status": "failure", "msg": "invalid order"}', content_type='application/json')
+    elif request.method == 'GET':
+        return render(request, 'ordering.html')

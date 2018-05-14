@@ -28,4 +28,4 @@ class Detail(models.Model):
     order = models.ForeignKey('Order', on_delete=models.CASCADE)
     food = models.ForeignKey('Food', on_delete=models.CASCADE)
     mark = models.CharField(max_length=300, null=True, blank=True)
-    state = models.TimeField()
+    state = models.CharField(max_length=8)
