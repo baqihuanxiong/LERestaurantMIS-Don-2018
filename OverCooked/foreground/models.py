@@ -11,6 +11,7 @@ class Food(models.Model):
     image = models.CharField(max_length=300)
     type = models.ForeignKey('FoodType', on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=8, decimal_places=2)
+    available = models.BooleanField(default=True)
 
 
 class Order(models.Model):
@@ -20,7 +21,7 @@ class Order(models.Model):
     guest = models.CharField(max_length=32, null=True, blank=True)
     phone = models.CharField(max_length=16, null=True, blank=True)
     address = models.CharField(max_length=300, null=True, blank=True)
-    date = models.TimeField(auto_now=True)
+    date = models.DateTimeField(auto_now=True)
     state = models.CharField(max_length=8, blank=True)
 
 
@@ -29,3 +30,4 @@ class Detail(models.Model):
     food = models.ForeignKey('Food', on_delete=models.CASCADE)
     mark = models.CharField(max_length=300, null=True, blank=True)
     state = models.CharField(max_length=8)
+    station = models.ForeignKey('kitchen.Station', on_delete=models.CASCADE, null=True, blank=True)

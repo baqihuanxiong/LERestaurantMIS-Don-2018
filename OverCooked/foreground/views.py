@@ -3,6 +3,8 @@ from django.shortcuts import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
 from . import models
+from kitchen.models import Prepare
+from kitchen.gadistribute import GA
 
 
 def check_order(order):
@@ -16,6 +18,8 @@ def check_order(order):
     for food in order['foods']:
         if food not in foods_ids:
             return False
+        if not models.Food.objects.get(id=food).available:
+            return False
     if len(order['foods']) == 0 or len(order['foods']) != len(order['marks']):
         return False
     return True
@@ -28,9 +32,19 @@ def ordering(request):
         if check_order(order):
             order_obj = models.Order.objects.create(type=order['type'], price=order['price'], guest=order['guest'],
                                                     phone=order['phone'], address=order['address'])
-            detail_list = [models.Detail(order=order_obj, food=models.Food.objects.get(id=order['foods'][i]),
-                                         mark=order['marks'][i], state='未分配') for i in range(len(order['foods']))]
+            detail_list = []
+            for i in range(len(order['foods'])):
+                food_state = '未分配'
+                try:
+                    prepare_obj = Prepare.objects.get(food_id=order['foods'][i])
+                    if prepare_obj.num > 0:
+                        food_state = '已完成'
+                except Exception:
+                    pass
+                detail_list.append(models.Detail(order=order_obj, food=models.Food.objects.get(id=order['foods'][i]),
+                                                 mark=order['marks'][i], state=food_state))
             models.Detail.objects.bulk_create(detail_list)
+            GA().calculate()
             return HttpResponse('{"status": "success"}', content_type='application/json')
         else:
             return HttpResponse('{"status": "failure", "msg": "invalid order"}', content_type='application/json')
