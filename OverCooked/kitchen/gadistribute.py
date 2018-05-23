@@ -47,7 +47,6 @@ class GA:
         for ind, fit in zip(self.pop, fitness):
             ind.fitness.values = fit
         self.fits = [ind.fitness.values[0] for ind in self.pop]
-        print(self.aeq, self.e, self.t1, self.t2)
 
     def evaluateInd(self, individual):
         F = [0] * self._n

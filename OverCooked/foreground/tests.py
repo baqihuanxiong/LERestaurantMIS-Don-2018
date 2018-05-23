@@ -17,8 +17,8 @@ class OrderTest(TestCase):
         data = {
             'type': '配送',
             'price': '112.5',
-            'foods': [1, 2, 3, 3],
-            'marks': ['', '中辣', '', ''],
+            'foods': [1, 2, 3, 3, 4, 7, 9],
+            'marks': ['', '', '', '', '', '', ''],
             'guest': '霸气浣熊',
             'phone': '17621192758',
             'address': '上海海事大学59号楼',

@@ -49,4 +49,8 @@ def ordering(request):
         else:
             return HttpResponse('{"status": "failure", "msg": "invalid order"}', content_type='application/json')
     elif request.method == 'GET':
-        return render(request, 'ordering.html')
+        context = dict()
+        context['menu'] = {ft_obj.name: [{'name': fo_obj.name, 'price': fo_obj.price, 'describe': fo_obj.describe}
+                                         for fo_obj in models.Food.objects.filter(type=ft_obj.id, available=1)]
+                           for ft_obj in models.FoodType.objects.all()}
+        return render(request, 'ordering.html', context)
