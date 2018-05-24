@@ -44,13 +44,15 @@ def ordering(request):
                 detail_list.append(models.Detail(order=order_obj, food=models.Food.objects.get(id=order['foods'][i]),
                                                  mark=order['marks'][i], state=food_state))
             models.Detail.objects.bulk_create(detail_list)
-            GA().calculate()
+            distr_ga = GA()
+            distr_ga.calculate()
+            distr_ga.save()
             return HttpResponse('{"status": "success"}', content_type='application/json')
         else:
             return HttpResponse('{"status": "failure", "msg": "invalid order"}', content_type='application/json')
     elif request.method == 'GET':
         context = dict()
-        context['menu'] = {ft_obj.name: [{'name': fo_obj.name, 'price': fo_obj.price, 'describe': fo_obj.describe}
+        context['menu'] = {ft_obj.name: [{'name': fo_obj.name, 'price': fo_obj.price, 'img': fo_obj.image, 'describe': fo_obj.describe}
                                          for fo_obj in models.Food.objects.filter(type=ft_obj.id, available=1)]
                            for ft_obj in models.FoodType.objects.all()}
         return render(request, 'ordering.html', context)

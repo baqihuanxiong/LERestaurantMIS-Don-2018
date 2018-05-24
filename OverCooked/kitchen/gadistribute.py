@@ -5,6 +5,7 @@ from deap import tools
 from foreground.models import Detail
 from foreground.models import Order
 from .models import Capacity
+from .models import Station
 
 
 class GA:
@@ -47,6 +48,7 @@ class GA:
         for ind, fit in zip(self.pop, fitness):
             ind.fitness.values = fit
         self.fits = [ind.fitness.values[0] for ind in self.pop]
+        self.best_ind = None
 
     def evaluateInd(self, individual):
         F = [0] * self._n
@@ -99,11 +101,21 @@ class GA:
 
             self.pop[:] = offspring
             self.fits = [ind.fitness.values[0] for ind in self.pop]
-            print("%s: %s" % (g, min(self.fits)))
+            # print("%s: %s" % (g, min(self.fits)))
 
-        best_ind = tools.selBest(self.pop, k=1)[0]
-        print("Best individual is %s, %s" % (best_ind, best_ind.fitness.values))
+        self.best_ind = tools.selBest(self.pop, k=1)[0]
+        print("Best individual is %s, %s" % (self.best_ind, self.best_ind.fitness.values))
 
-        rt = [e[random.randint(0, len(e) - 1)] for e in self.aeq]
-        print("Distribute random %s, %s" % (rt, self.evaluateInd(rt)))
+    def save(self):
+        for i in range(self._n):
+            self.details[i].station_id = self.best_ind[i]
+            self.details[i].save()
+
+        # 各工位前两个订单菜品置为已分配
+        for stat in Station.objects.all():
+            detail_qs = Detail.objects.filter(station_id=stat.id).order_by('order_id')
+            for i, detail in enumerate(detail_qs):
+                if i < 2:
+                    detail.state = '已分配'
+                    detail.save()
 

@@ -40,8 +40,11 @@ INSTALLED_APPS = [
     'login.apps.LoginConfig',
     'foreground.apps.ForegroundConfig',
     'kitchen.apps.KitchenConfig',
-    'personnel.apps.PersonnelConfig'
+    'personnel.apps.PersonnelConfig',
+    'channels'
 ]
+
+ASGI_APPLICATION = "OverCooked.routing.application"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -72,7 +75,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'OverCooked.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
@@ -131,3 +133,4 @@ STATICFILES_DIRS = (
 )
 
 LOGIN_URL = '/login/'
+

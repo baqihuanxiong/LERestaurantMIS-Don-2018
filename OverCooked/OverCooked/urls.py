@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^logout/$', login.views.logout),
     url(r'^$', login.views.index, name='index'),
     url(r'^foreground/', include('foreground.urls')),
+    url(r'^kitchen/', include('kitchen.urls')),
     url(r'^admin/', admin.site.urls),
 ]
