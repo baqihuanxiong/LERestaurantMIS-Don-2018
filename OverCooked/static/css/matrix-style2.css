@@ -431,6 +431,19 @@ hr{
 #choices label{ 
 	display:inline-block; padding-right:20px; 
 }
+#choices_top{ 
+	margin:10px 0; 
+	padding:10px;
+}
+#choices_top br{ 
+	display:none;
+}
+#choices_top input{
+	margin:-5px 5px 0 0;
+}
+#choices_top label{ 
+	display:inline-block; padding-right:20px; 
+}
 #tooltip {
 	position: absolute;
 	display:none;
