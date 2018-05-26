@@ -38,6 +38,9 @@ def ordering(request):
                 try:
                     prepare_obj = Prepare.objects.get(food_id=order['foods'][i])
                     if prepare_obj.num > 0:
+                        prepare_obj.num -= 1
+                        prepare_obj.used += 1
+                        prepare_obj.save()
                         food_state = '已完成'
                 except Exception:
                     pass
