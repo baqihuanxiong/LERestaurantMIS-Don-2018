@@ -12,6 +12,7 @@ class Food(models.Model):
     type = models.ForeignKey('FoodType', on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=8, decimal_places=2)
     available = models.BooleanField(default=True)
+    score = models.IntegerField(default=0)
 
 
 class Order(models.Model):
@@ -21,7 +22,7 @@ class Order(models.Model):
     guest = models.CharField(max_length=32, null=True, blank=True)
     phone = models.CharField(max_length=16, null=True, blank=True)
     address = models.CharField(max_length=300, null=True, blank=True)
-    date = models.DateTimeField(auto_now=True)
+    date = models.DateTimeField(auto_now_add=True)
     state = models.CharField(max_length=8, blank=True)
 
 

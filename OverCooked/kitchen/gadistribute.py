@@ -77,6 +77,9 @@ class GA:
         return individual,
 
     def calculate(self):
+        if self._n < 3:
+            self.best_ind = tools.selBest(self.pop, k=1)[0]
+            return
         g = 0
         while g < 100:
             g += 1
@@ -113,7 +116,7 @@ class GA:
 
         # 各工位前两个订单菜品置为已分配
         for stat in Station.objects.all():
-            detail_qs = Detail.objects.filter(station_id=stat.id).order_by('order_id')
+            detail_qs = Detail.objects.filter(station_id=stat.id, state__in=['已分配', '未分配']).order_by('order_id')
             for i, detail in enumerate(detail_qs):
                 if i < 2:
                     detail.state = '已分配'

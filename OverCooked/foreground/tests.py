@@ -15,13 +15,13 @@ class OrderTest(TestCase):
         #     'state': '',
         # }
         data = {
-            'type': '配送',
-            'price': '112.5',
-            'foods': [1, 2, 3, 3, 4, 7, 9],
-            'marks': ['', '', '', '', '', '', ''],
-            'guest': '霸气浣熊',
-            'phone': '17621192758',
-            'address': '上海海事大学59号楼',
+            'type': '外带',
+            'price': '24.5',
+            'foods': [13, 18],
+            'marks': ['', ''],
+            'guest': '',
+            'phone': '',
+            'address': '',
             'state': '',
         }
         response = self.client.post('/foreground/ordering/', json.dumps(data, ensure_ascii=False).encode('utf-8'))
