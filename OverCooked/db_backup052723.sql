@@ -125,7 +125,7 @@ CREATE TABLE `auth_user` (
 
 LOCK TABLES `auth_user` WRITE;
 /*!40000 ALTER TABLE `auth_user` DISABLE KEYS */;
-INSERT INTO `auth_user` VALUES (1,'pbkdf2_sha256$100000$jmwFzQM3dWDe$VKJKDhk1KRUBvtIPfWTpESEZx9V9pUJUvw/TVuGiR5s=','2018-05-26 00:05:58.878029',1,'admin','','','lw390937635@163.com',1,1,'2018-04-16 14:23:59.695811'),(3,'pbkdf2_sha256$100000$FHspz9AdbSS2$0A+xpO0FSq9hnR/7B1jaQkJA4d+LQO3tU3uUZ7Qw0hQ=','2018-05-07 13:24:56.941524',0,'user0000','','','',0,1,'2018-05-07 10:36:10.768793');
+INSERT INTO `auth_user` VALUES (1,'pbkdf2_sha256$100000$jmwFzQM3dWDe$VKJKDhk1KRUBvtIPfWTpESEZx9V9pUJUvw/TVuGiR5s=','2018-05-26 19:51:54.413786',1,'admin','','','lw390937635@163.com',1,1,'2018-04-16 14:23:59.695811'),(3,'pbkdf2_sha256$100000$FHspz9AdbSS2$0A+xpO0FSq9hnR/7B1jaQkJA4d+LQO3tU3uUZ7Qw0hQ=','2018-05-07 13:24:56.941524',0,'user0000','','','',0,1,'2018-05-07 10:36:10.768793');
 /*!40000 ALTER TABLE `auth_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -258,7 +258,7 @@ CREATE TABLE `django_migrations` (
   `name` varchar(255) NOT NULL,
   `applied` datetime(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -267,7 +267,7 @@ CREATE TABLE `django_migrations` (
 
 LOCK TABLES `django_migrations` WRITE;
 /*!40000 ALTER TABLE `django_migrations` DISABLE KEYS */;
-INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2018-04-08 12:35:25.998269'),(2,'auth','0001_initial','2018-04-08 12:35:27.078781'),(3,'admin','0001_initial','2018-04-08 12:35:27.345429'),(4,'admin','0002_logentry_remove_auto_add','2018-04-08 12:35:27.356436'),(5,'contenttypes','0002_remove_content_type_name','2018-04-08 12:35:27.547019'),(6,'auth','0002_alter_permission_name_max_length','2018-04-08 12:35:27.645423'),(7,'auth','0003_alter_user_email_max_length','2018-04-08 12:35:27.741942'),(8,'auth','0004_alter_user_username_opts','2018-04-08 12:35:27.754814'),(9,'auth','0005_alter_user_last_login_null','2018-04-08 12:35:27.839745'),(10,'auth','0006_require_contenttypes_0002','2018-04-08 12:35:27.844249'),(11,'auth','0007_alter_validators_add_error_messages','2018-04-08 12:35:27.855258'),(12,'auth','0008_alter_user_username_max_length','2018-04-08 12:35:28.032080'),(13,'auth','0009_alter_user_last_name_max_length','2018-04-08 12:35:28.122704'),(14,'sessions','0001_initial','2018-04-08 12:35:28.193062'),(15,'mis','0001_initial','2018-04-16 14:21:18.684138'),(16,'foreground','0001_initial','2018-05-07 15:33:44.062049'),(17,'foreground','0002_auto_20180507_2336','2018-05-07 15:36:34.050516'),(18,'foreground','0003_auto_20180508_1726','2018-05-08 09:26:25.169797'),(19,'foreground','0004_remove_order_foods','2018-05-08 09:28:31.509515'),(20,'foreground','0005_auto_20180508_2132','2018-05-08 13:32:58.096176'),(21,'foreground','0006_auto_20180514_1111','2018-05-14 03:11:12.956456'),(22,'personnel','0001_initial','2018-05-14 05:29:31.623095'),(23,'kitchen','0001_initial','2018-05-14 05:29:31.834701'),(24,'kitchen','0002_auto_20180514_1335','2018-05-14 05:35:57.006914'),(25,'personnel','0002_auto_20180514_2040','2018-05-14 12:40:48.856733'),(26,'foreground','0007_food_available','2018-05-14 13:34:33.565252'),(27,'kitchen','0003_prepare','2018-05-16 00:30:05.947412'),(28,'kitchen','0004_auto_20180516_0930','2018-05-16 01:30:10.182684'),(29,'foreground','0008_detail_station','2018-05-16 01:46:14.412033'),(30,'kitchen','0005_auto_20180516_0949','2018-05-16 01:49:10.768618'),(31,'foreground','0009_auto_20180520_0225','2018-05-19 18:26:16.117562'),(32,'foreground','0010_auto_20180521_2326','2018-05-21 15:26:12.179915');
+INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2018-04-08 12:35:25.998269'),(2,'auth','0001_initial','2018-04-08 12:35:27.078781'),(3,'admin','0001_initial','2018-04-08 12:35:27.345429'),(4,'admin','0002_logentry_remove_auto_add','2018-04-08 12:35:27.356436'),(5,'contenttypes','0002_remove_content_type_name','2018-04-08 12:35:27.547019'),(6,'auth','0002_alter_permission_name_max_length','2018-04-08 12:35:27.645423'),(7,'auth','0003_alter_user_email_max_length','2018-04-08 12:35:27.741942'),(8,'auth','0004_alter_user_username_opts','2018-04-08 12:35:27.754814'),(9,'auth','0005_alter_user_last_login_null','2018-04-08 12:35:27.839745'),(10,'auth','0006_require_contenttypes_0002','2018-04-08 12:35:27.844249'),(11,'auth','0007_alter_validators_add_error_messages','2018-04-08 12:35:27.855258'),(12,'auth','0008_alter_user_username_max_length','2018-04-08 12:35:28.032080'),(13,'auth','0009_alter_user_last_name_max_length','2018-04-08 12:35:28.122704'),(14,'sessions','0001_initial','2018-04-08 12:35:28.193062'),(15,'mis','0001_initial','2018-04-16 14:21:18.684138'),(16,'foreground','0001_initial','2018-05-07 15:33:44.062049'),(17,'foreground','0002_auto_20180507_2336','2018-05-07 15:36:34.050516'),(18,'foreground','0003_auto_20180508_1726','2018-05-08 09:26:25.169797'),(19,'foreground','0004_remove_order_foods','2018-05-08 09:28:31.509515'),(20,'foreground','0005_auto_20180508_2132','2018-05-08 13:32:58.096176'),(21,'foreground','0006_auto_20180514_1111','2018-05-14 03:11:12.956456'),(22,'personnel','0001_initial','2018-05-14 05:29:31.623095'),(23,'kitchen','0001_initial','2018-05-14 05:29:31.834701'),(24,'kitchen','0002_auto_20180514_1335','2018-05-14 05:35:57.006914'),(25,'personnel','0002_auto_20180514_2040','2018-05-14 12:40:48.856733'),(26,'foreground','0007_food_available','2018-05-14 13:34:33.565252'),(27,'kitchen','0003_prepare','2018-05-16 00:30:05.947412'),(28,'kitchen','0004_auto_20180516_0930','2018-05-16 01:30:10.182684'),(29,'foreground','0008_detail_station','2018-05-16 01:46:14.412033'),(30,'kitchen','0005_auto_20180516_0949','2018-05-16 01:49:10.768618'),(31,'foreground','0009_auto_20180520_0225','2018-05-19 18:26:16.117562'),(32,'foreground','0010_auto_20180521_2326','2018-05-21 15:26:12.179915'),(33,'foreground','0011_auto_20180527_1507','2018-05-27 15:07:33.059364'),(34,'foreground','0012_food_score','2018-05-27 22:10:42.349687');
 /*!40000 ALTER TABLE `django_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -293,7 +293,7 @@ CREATE TABLE `django_session` (
 
 LOCK TABLES `django_session` WRITE;
 /*!40000 ALTER TABLE `django_session` DISABLE KEYS */;
-INSERT INTO `django_session` VALUES ('49yhpu5z5tz2drntk4k2sbxhbfqsosys','M2U5YjcwMGFlOTVlZWRiNzViYjU1NTIxZjVlODA1NmY0MjY5NzIwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MjkwOTA4ODdiYjBjYjI1MDU2OGFmNjg4ZjFkYjY2ZjcyMGY1MThiIn0=','2018-05-21 05:45:17.684849'),('4nyiz79e3fplkhavlwdtbgbo4o56rpxw','M2U5YjcwMGFlOTVlZWRiNzViYjU1NTIxZjVlODA1NmY0MjY5NzIwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MjkwOTA4ODdiYjBjYjI1MDU2OGFmNjg4ZjFkYjY2ZjcyMGY1MThiIn0=','2018-06-09 00:05:58.885025'),('94mwesy2ppqhi96gbtpf07umgtjtlbh4','M2U5YjcwMGFlOTVlZWRiNzViYjU1NTIxZjVlODA1NmY0MjY5NzIwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MjkwOTA4ODdiYjBjYjI1MDU2OGFmNjg4ZjFkYjY2ZjcyMGY1MThiIn0=','2018-06-09 00:04:15.157805'),('9k5n5l47sjc3juvupf500nsyno9fagz9','M2U5YjcwMGFlOTVlZWRiNzViYjU1NTIxZjVlODA1NmY0MjY5NzIwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MjkwOTA4ODdiYjBjYjI1MDU2OGFmNjg4ZjFkYjY2ZjcyMGY1MThiIn0=','2018-05-22 09:35:33.816346'),('ddw35r48xo7vtpodnwjr7gbuzq6b9yqt','ZTE1NTdhZjYyMmIyYmVmZmJjMDVkNDMxZTUxYTgwZWMyYzVmYzlmODp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0ZmMwZTk4MTRkMzhkYTAwZWZiMDc1ZGI3NDBmOTUwNzU5ZmEwMjU3In0=','2018-04-30 14:25:52.307492'),('fom9s3o3kp1v99sdt2v24ufalite7i4u','M2U5YjcwMGFlOTVlZWRiNzViYjU1NTIxZjVlODA1NmY0MjY5NzIwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MjkwOTA4ODdiYjBjYjI1MDU2OGFmNjg4ZjFkYjY2ZjcyMGY1MThiIn0=','2018-06-05 18:48:25.642543'),('mjvycljm3zqsc88oogrwsh685acjg57a','M2U5YjcwMGFlOTVlZWRiNzViYjU1NTIxZjVlODA1NmY0MjY5NzIwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MjkwOTA4ODdiYjBjYjI1MDU2OGFmNjg4ZjFkYjY2ZjcyMGY1MThiIn0=','2018-06-06 21:22:28.343472'),('r0om0j0p14geyke8hzxfruj9xohdw20c','M2U5YjcwMGFlOTVlZWRiNzViYjU1NTIxZjVlODA1NmY0MjY5NzIwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MjkwOTA4ODdiYjBjYjI1MDU2OGFmNjg4ZjFkYjY2ZjcyMGY1MThiIn0=','2018-06-06 19:42:55.427115');
+INSERT INTO `django_session` VALUES ('49yhpu5z5tz2drntk4k2sbxhbfqsosys','M2U5YjcwMGFlOTVlZWRiNzViYjU1NTIxZjVlODA1NmY0MjY5NzIwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MjkwOTA4ODdiYjBjYjI1MDU2OGFmNjg4ZjFkYjY2ZjcyMGY1MThiIn0=','2018-05-21 05:45:17.684849'),('4nyiz79e3fplkhavlwdtbgbo4o56rpxw','M2U5YjcwMGFlOTVlZWRiNzViYjU1NTIxZjVlODA1NmY0MjY5NzIwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MjkwOTA4ODdiYjBjYjI1MDU2OGFmNjg4ZjFkYjY2ZjcyMGY1MThiIn0=','2018-06-09 00:05:58.885025'),('94mwesy2ppqhi96gbtpf07umgtjtlbh4','M2U5YjcwMGFlOTVlZWRiNzViYjU1NTIxZjVlODA1NmY0MjY5NzIwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MjkwOTA4ODdiYjBjYjI1MDU2OGFmNjg4ZjFkYjY2ZjcyMGY1MThiIn0=','2018-06-09 00:04:15.157805'),('9k5n5l47sjc3juvupf500nsyno9fagz9','M2U5YjcwMGFlOTVlZWRiNzViYjU1NTIxZjVlODA1NmY0MjY5NzIwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MjkwOTA4ODdiYjBjYjI1MDU2OGFmNjg4ZjFkYjY2ZjcyMGY1MThiIn0=','2018-05-22 09:35:33.816346'),('ddw35r48xo7vtpodnwjr7gbuzq6b9yqt','ZTE1NTdhZjYyMmIyYmVmZmJjMDVkNDMxZTUxYTgwZWMyYzVmYzlmODp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0ZmMwZTk4MTRkMzhkYTAwZWZiMDc1ZGI3NDBmOTUwNzU5ZmEwMjU3In0=','2018-04-30 14:25:52.307492'),('fom9s3o3kp1v99sdt2v24ufalite7i4u','M2U5YjcwMGFlOTVlZWRiNzViYjU1NTIxZjVlODA1NmY0MjY5NzIwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MjkwOTA4ODdiYjBjYjI1MDU2OGFmNjg4ZjFkYjY2ZjcyMGY1MThiIn0=','2018-06-05 18:48:25.642543'),('lohxfa5ephql7t1aahdze7rwsnxhxsar','M2U5YjcwMGFlOTVlZWRiNzViYjU1NTIxZjVlODA1NmY0MjY5NzIwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MjkwOTA4ODdiYjBjYjI1MDU2OGFmNjg4ZjFkYjY2ZjcyMGY1MThiIn0=','2018-06-09 19:51:54.418766'),('mjvycljm3zqsc88oogrwsh685acjg57a','M2U5YjcwMGFlOTVlZWRiNzViYjU1NTIxZjVlODA1NmY0MjY5NzIwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MjkwOTA4ODdiYjBjYjI1MDU2OGFmNjg4ZjFkYjY2ZjcyMGY1MThiIn0=','2018-06-06 21:22:28.343472'),('r0om0j0p14geyke8hzxfruj9xohdw20c','M2U5YjcwMGFlOTVlZWRiNzViYjU1NTIxZjVlODA1NmY0MjY5NzIwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MjkwOTA4ODdiYjBjYjI1MDU2OGFmNjg4ZjFkYjY2ZjcyMGY1MThiIn0=','2018-06-06 19:42:55.427115');
 /*!40000 ALTER TABLE `django_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -318,7 +318,7 @@ CREATE TABLE `foreground_detail` (
   CONSTRAINT `foreground_detail_food_id_746c3dbb_fk_foreground_food_id` FOREIGN KEY (`food_id`) REFERENCES `foreground_food` (`id`),
   CONSTRAINT `foreground_detail_order_id_4cc6e68c_fk_foreground_order_id` FOREIGN KEY (`order_id`) REFERENCES `foreground_order` (`id`),
   CONSTRAINT `foreground_detail_station_id_bf06b9f2_fk_kitchen_station_id` FOREIGN KEY (`station_id`) REFERENCES `kitchen_station` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=181 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=219 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -327,7 +327,7 @@ CREATE TABLE `foreground_detail` (
 
 LOCK TABLES `foreground_detail` WRITE;
 /*!40000 ALTER TABLE `foreground_detail` DISABLE KEYS */;
-INSERT INTO `foreground_detail` VALUES (160,'','已完成',1,38,NULL),(161,'不辣','已分配',2,38,1),(163,'','已分配',3,38,10),(164,'','已分配',4,38,4),(165,'','已分配',7,38,3),(166,'','已分配',9,38,6),(168,'不辣','已分配',2,39,3),(169,'','已分配',3,39,7),(170,'','已分配',3,39,10),(171,'','已分配',4,39,5),(172,'','已分配',7,39,1),(173,'','已分配',9,39,6),(174,'','已完成',1,40,NULL),(175,'不辣','未分配',2,40,3),(176,'','未分配',3,40,10),(177,'','已分配',3,40,8),(178,'','已分配',4,40,1),(179,'','已分配',7,40,2),(180,'','未分配',9,40,6);
+INSERT INTO `foreground_detail` VALUES (181,'','已完成',1,41,2),(182,'','已分配',6,41,4),(183,'','已分配',17,41,6),(184,'','已分配',1,42,1),(185,'','已分配',3,42,8),(186,'','已分配',6,42,4),(187,'','已分配',13,43,10),(188,'','已分配',14,43,2),(189,'','未分配',6,44,4),(190,'','已分配',7,44,3),(191,'','已分配',8,44,6),(192,'','已分配',7,45,1),(193,'','已分配',10,45,3),(194,'','已分配',16,45,2),(195,'','已分配',3,46,9),(196,'','已分配',5,46,5),(197,'','未分配',6,46,4),(198,'','已分配',12,46,2),(199,'','已分配',18,46,10),(200,'不要辣','未分配',18,47,10),(201,'','已分配',9,48,7),(202,'','已分配',3,49,7),(203,'','未分配',6,49,4),(204,'','未分配',11,49,6),(205,'','已分配',4,50,5),(206,'','已分配',19,50,5),(207,'','已分配',3,51,9),(208,'','未分配',15,51,2),(209,'','未分配',6,52,4),(210,'','未分配',8,52,3),(211,'','未分配',11,52,6),(212,'','未分配',2,53,3),(213,'','已分配',3,53,8),(214,'','未分配',5,53,1),(215,'','未分配',6,53,4),(216,'打包','未分配',13,53,10),(217,'','未分配',13,54,10),(218,'','未分配',18,54,10);
 /*!40000 ALTER TABLE `foreground_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -346,10 +346,11 @@ CREATE TABLE `foreground_food` (
   `price` decimal(8,2) NOT NULL,
   `type_id` int(11) NOT NULL,
   `available` tinyint(1) NOT NULL,
+  `score` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `foreground_food_type_id_4658cddb_fk_foreground_foodtype_id` (`type_id`),
   CONSTRAINT `foreground_food_type_id_4658cddb_fk_foreground_foodtype_id` FOREIGN KEY (`type_id`) REFERENCES `foreground_foodtype` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -358,7 +359,7 @@ CREATE TABLE `foreground_food` (
 
 LOCK TABLES `foreground_food` WRITE;
 /*!40000 ALTER TABLE `foreground_food` DISABLE KEYS */;
-INSERT INTO `foreground_food` VALUES (1,'鱼香肉丝','-','-',11.50,2,1),(2,'宫保鸡丁','-','-',12.50,2,1),(3,'鸭血汤','-','-',9.00,1,1),(4,'红烧肉','-','-',18.00,3,1),(5,'腊鸡腿','-','-',12.50,3,1),(6,'米饭','-','-',1.00,5,1),(7,'番茄炒蛋','-','-',8.50,2,1),(8,'凉拌干丝','-','-',7.50,4,1),(9,'番茄鸡蛋面','-','-',10.50,6,1),(10,'白斩鸡（中）','-','-',16.80,4,1),(11,'白斩鸡（大）','-','-',19.80,4,1),(12,'虎皮尖椒','-','-',7.80,2,1);
+INSERT INTO `foreground_food` VALUES (1,'鱼香肉丝','','/static/img/noimg.jpg',11.50,2,1,0),(2,'宫保鸡丁','','/static/img/noimg.jpg',12.50,2,1,0),(3,'鸭血汤','','/static/img/noimg.jpg',9.00,1,1,0),(4,'红烧肉','','/static/img/noimg.jpg',18.00,3,1,0),(5,'腊鸡腿','','/static/img/noimg.jpg',12.50,3,1,0),(6,'米饭','','/static/img/noimg.jpg',1.00,5,1,0),(7,'番茄炒蛋','','/static/img/noimg.jpg',8.50,2,1,0),(8,'凉拌干丝','','/static/img/noimg.jpg',7.50,4,1,0),(9,'番茄鸡蛋面','','/static/img/noimg.jpg',10.50,6,1,0),(10,'白斩鸡（中）','','/static/img/noimg.jpg',16.80,4,1,0),(11,'白斩鸡（大）','','/static/img/noimg.jpg',19.80,4,1,0),(12,'虎皮尖椒','','/static/img/noimg.jpg',7.80,2,1,0),(13,'小笼包','','/static/img/noimg.jpg',11.00,7,1,0),(14,'土豆焖饭','','/static/img/noimg.jpg',17.00,5,1,0),(15,'蛋包饭','','/static/img/noimg.jpg',16.50,5,1,0),(16,'咖喱饭','','/static/img/noimg.jpg',17.80,5,1,0),(17,'蒸水蛋','','/static/img/noimg.jpg',7.00,3,1,0),(18,'腊肠鸡蛋煎饼','','/static/img/noimg.jpg',6.00,7,1,0),(19,'菌汤面','','/static/img/noimg.jpg',12.50,6,1,0);
 /*!40000 ALTER TABLE `foreground_food` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -373,7 +374,7 @@ CREATE TABLE `foreground_foodtype` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(32) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -382,7 +383,7 @@ CREATE TABLE `foreground_foodtype` (
 
 LOCK TABLES `foreground_foodtype` WRITE;
 /*!40000 ALTER TABLE `foreground_foodtype` DISABLE KEYS */;
-INSERT INTO `foreground_foodtype` VALUES (1,'汤'),(2,'炒菜'),(3,'蒸菜'),(4,'凉菜'),(5,'主食'),(6,'面食');
+INSERT INTO `foreground_foodtype` VALUES (1,'汤'),(2,'炒菜'),(3,'蒸菜'),(4,'凉菜'),(5,'主食'),(6,'面食'),(7,'小吃');
 /*!40000 ALTER TABLE `foreground_foodtype` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -403,7 +404,7 @@ CREATE TABLE `foreground_order` (
   `date` datetime(6) NOT NULL,
   `state` varchar(8) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -412,7 +413,7 @@ CREATE TABLE `foreground_order` (
 
 LOCK TABLES `foreground_order` WRITE;
 /*!40000 ALTER TABLE `foreground_order` DISABLE KEYS */;
-INSERT INTO `foreground_order` VALUES (38,'配送',112.50,'霸气浣熊','17621192758','上海海事大学59号楼','2018-05-25 19:18:24.570507',''),(39,'配送',112.50,'霸气浣熊','17621192758','上海海事大学59号楼','2018-05-25 20:17:52.551169',''),(40,'配送',112.50,'霸气浣熊','17621192758','上海海事大学59号楼','2018-05-25 20:17:57.428956','');
+INSERT INTO `foreground_order` VALUES (41,'配送',18.60,'霸气浣熊','17621192758','上海海事大学59号楼','2018-05-27 10:45:00.015311','未完成'),(42,'配送',19.60,'霸气浣熊','17621192758','上海海事大学59号楼','2018-05-27 10:54:00.015311','未完成'),(43,'配送',19.60,'霸气浣熊','17621192758','上海海事大学59号楼','2018-05-27 11:04:00.030934','未完成'),(44,'配送',19.60,'霸气浣熊','17621192758','上海海事大学59号楼','2018-05-27 11:12:00.030934','未完成'),(45,'配送',27.10,'霸气浣熊','17621192758','上海海事大学59号楼','2018-05-27 11:14:00.037454','未完成'),(46,'配送',27.10,'霸气浣熊','17621192758','上海海事大学59号楼','2018-05-27 11:18:00.037454','未完成'),(47,'配送',27.10,'霸气浣熊','17621192758','上海海事大学59号楼','2018-05-27 11:24:00.037454','未完成'),(48,'堂吃',10.50,'','','','2018-05-27 11:26:00.053132','未完成'),(49,'堂吃',24.50,'','','','2018-05-27 11:30:00.053132','未完成'),(50,'堂吃',25.50,'','','','2018-05-27 11:36:00.053132','未完成'),(51,'堂吃',24.50,'','','','2018-05-27 11:43:00.053132','未完成'),(52,'堂吃',24.50,'','','','2018-05-27 11:50:00.068719','未完成'),(53,'堂吃',24.50,'','','','2018-05-27 12:03:00.068719','未完成'),(54,'外带',24.50,'','','','2018-05-27 12:14:00.068719','未完成');
 /*!40000 ALTER TABLE `foreground_order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -433,7 +434,7 @@ CREATE TABLE `kitchen_capacity` (
   KEY `kitchen_capacity_station_id_c94626d9_fk_kitchen_station_id` (`station_id`),
   CONSTRAINT `kitchen_capacity_food_id_8e4be3f3_fk_foreground_food_id` FOREIGN KEY (`food_id`) REFERENCES `foreground_food` (`id`),
   CONSTRAINT `kitchen_capacity_station_id_c94626d9_fk_kitchen_station_id` FOREIGN KEY (`station_id`) REFERENCES `kitchen_station` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -442,7 +443,7 @@ CREATE TABLE `kitchen_capacity` (
 
 LOCK TABLES `kitchen_capacity` WRITE;
 /*!40000 ALTER TABLE `kitchen_capacity` DISABLE KEYS */;
-INSERT INTO `kitchen_capacity` VALUES (1,5.2,1,1),(2,4.5,1,2),(3,4.6,1,3),(4,4.9,2,1),(5,4.4,2,2),(6,4.4,2,3),(7,1,3,7),(8,1,3,8),(9,1,3,9),(10,1,3,10),(11,7.5,4,1),(12,7.5,4,4),(13,9,4,5),(14,3,5,1),(15,3,5,4),(16,4.5,5,5),(17,0.2,6,4),(18,3.2,7,1),(19,3,7,2),(20,3,7,3),(21,2.1,8,3),(22,2.1,8,6),(23,4.5,9,5),(24,5,9,6),(25,5,9,7),(26,1,10,3),(27,1,10,6),(28,1,11,3),(29,1,11,6),(30,3.4,12,1),(31,3.2,12,2),(32,3.2,12,3);
+INSERT INTO `kitchen_capacity` VALUES (1,5.2,1,1),(2,4.5,1,2),(3,4.6,1,3),(4,4.9,2,1),(5,4.4,2,2),(6,4.4,2,3),(7,1,3,7),(8,1,3,8),(9,1,3,9),(10,1,3,10),(11,7.5,4,1),(12,7.5,4,4),(13,9,4,5),(14,3,5,1),(15,3,5,4),(16,4.5,5,5),(17,0.2,6,4),(18,3.2,7,1),(19,3,7,2),(20,3,7,3),(21,2.1,8,3),(22,2.1,8,6),(23,4.5,9,5),(24,5,9,6),(25,5,9,7),(26,1,10,3),(27,1,10,6),(28,1,11,3),(29,1,11,6),(30,3.4,12,1),(31,3.2,12,2),(32,3.2,12,3),(33,11.5,13,10),(34,4.4,14,1),(35,4.4,14,2),(36,4.4,14,3),(37,5.4,14,4),(38,4.4,15,1),(39,4.4,15,2),(40,4.4,15,3),(41,4.6,15,4),(42,3.8,16,1),(43,3.8,16,2),(44,3.8,16,3),(45,4.5,16,4),(46,5.3,17,6),(47,2.4,18,10),(48,4.6,19,5),(49,4.6,19,6),(50,4.8,19,7);
 /*!40000 ALTER TABLE `kitchen_capacity` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -463,7 +464,7 @@ CREATE TABLE `kitchen_prepare` (
   PRIMARY KEY (`id`),
   KEY `kitchen_prepare_food_id_a3a6ccd2_fk_foreground_food_id` (`food_id`),
   CONSTRAINT `kitchen_prepare_food_id_a3a6ccd2_fk_foreground_food_id` FOREIGN KEY (`food_id`) REFERENCES `foreground_food` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -472,7 +473,7 @@ CREATE TABLE `kitchen_prepare` (
 
 LOCK TABLES `kitchen_prepare` WRITE;
 /*!40000 ALTER TABLE `kitchen_prepare` DISABLE KEYS */;
-INSERT INTO `kitchen_prepare` VALUES (1,2,'00:00:00.000000',1,5,1);
+INSERT INTO `kitchen_prepare` VALUES (2,0,'13:48:56.185499',1,11,0),(3,0,'13:49:08.247100',3,1,0);
 /*!40000 ALTER TABLE `kitchen_prepare` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -593,4 +594,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-26  0:48:42
+-- Dump completed on 2018-05-27 23:03:12
