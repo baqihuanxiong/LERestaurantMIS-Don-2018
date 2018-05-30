@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'login.apps.LoginConfig',
     'foreground.apps.ForegroundConfig',
     'kitchen.apps.KitchenConfig',
+    'warehouse.apps.WarehouseConfig',
+    'financial.apps.FinancialConfig',
     'personnel.apps.PersonnelConfig',
     'channels'
 ]

@@ -13,6 +13,7 @@ class Food(models.Model):
     price = models.DecimalField(max_digits=8, decimal_places=2)
     available = models.BooleanField(default=True)
     score = models.IntegerField(default=0)
+    material = models.ManyToManyField('warehouse.Material', through='warehouse.Bom')
 
 
 class Order(models.Model):

@@ -45,7 +45,7 @@
                     <td id="describe{{ food.id}}" contenteditable="true">{{ food.descirbe }}</td>
                     <td id="type{{ food.id }}">{{ food.type }}</td>
                     <td id="price{{ food.id }}" contenteditable="true">{{ food.price }}</td>
-                    <td id="image{{ food.image }}" contenteditable="true">{{ food.image }}</td>
+                    <td id="image{{ food.id }}" contenteditable="true">{{ food.image }}</td>
                     <td id="available{{ food.id }}" contenteditable="true">{{ food.available }}</td></tr>
                 {% endfor %}
               </tbody>
@@ -125,7 +125,13 @@ function update() {
     url: "/foreground/update_food/",
     data: JSON.stringify(content),
     datatype: "text",
-  })
+    success: function(result) {
+        alert(result['status']);
+    },
+    error: function(XMLHttpRequest, textStatus, errorThrown) {
+      alert(errorThrown);
+      },
+  });
 }
 </script>
 

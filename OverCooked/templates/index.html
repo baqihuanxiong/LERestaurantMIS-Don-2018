@@ -67,23 +67,49 @@
             <li class="submenu"> 
                 <a href="#">
                     <i class="icon icon-stop"></i> 
-                    <span>库存采购</span>
-                    <span class="label label-important">2</span>
+                    <span>仓库</span>
+                    <span class="label label-important">4</span>
                 </a>
                 <ul>
-                    <li><a class="menu_a" link=""><i class="icon icon-caret-right"></i>采购</a></li>
-                    <li><a class="menu_a" link=""><i class="icon icon-caret-right"></i>库存管理</a></li>
+                    <li><a class="menu_a" link="/warehouse/entry/"><i class="icon icon-caret-right"></i>领料登记</a></li>  <!-- 动态添加 -->
+                    <li><a class="menu_a" link=""><i class="icon icon-caret-right"></i>采购入库</a></li>
+                    <li><a class="menu_a" link="/warehouse/inventory/"><i class="icon icon-caret-right"></i>库存盘点</a></li>  <!-- 打印盘点表 -->
+                    <li><a class="menu_a" link="/warehouse/query/"><i class="icon icon-caret-right"></i>库存查询</a></li>
+                </ul>
+            </li>
+            <li class="submenu"> 
+                <a href="#">
+                    <i class="icon icon-shopping-cart"></i> 
+                    <span>采购</span>
+                    <span class="label label-important">3</span>
+                </a>
+                <ul>
+                    <li><a class="menu_a" link=""><i class="icon icon-caret-right"></i>采购订单</a></li>  <!-- excel导入 链接采购入库、采购付款-->
+                    <li><a class="menu_a" link=""><i class="icon icon-caret-right"></i>采购台账</a></li>  <!-- 可取消采购订单 -->
+                    <li><a class="menu_a" link=""><i class="icon icon-caret-right"></i>供应商管理</a></li>  <!-- 不收集报价信息 -->
+                </ul>
+            </li>
+            <li class="submenu"> 
+                <a href="#">
+                    <i class="icon icon-user"></i> 
+                    <span>人事系统</span>  
+                    <span class="label label-important">3</span>
+                </a>
+                <ul>
+                    <li><a class="menu_a" link=""><i class="icon icon-caret-right"></i>员工信息录入</a></li>
+                    <li><a class="menu_a" link=""><i class="icon icon-caret-right"></i>员工管理</a></li>
+                    <li><a class="menu_a" link=""><i class="icon icon-caret-right"></i>工资发放</a></li>  <!-- 添加工资发放记录 -->
                 </ul>
             </li>
             <li class="submenu"> 
                 <a href="#">
                     <i class="icon icon-info-sign"></i> 
-                    <span>人事财务</span>
+                    <span>财务系统</span>
                     <span class="label label-important">2</span>
                 </a>
                 <ul>
-                    <li><a class="menu_a" link=""><i class="icon icon-caret-right"></i>人事</a></li>
-                    <li><a class="menu_a" link=""><i class="icon icon-caret-right"></i>财务</a></li>
+                    <li><a class="menu_a" link=""><i class="icon icon-caret-right"></i>采购付款</a></li>
+                    <li><a class="menu_a" link=""><i class="icon icon-caret-right"></i>收支统计</a></li>
                 </ul>
             </li>
         </ul>

@@ -56,7 +56,7 @@ def ordering(request):
         return HttpResponse(str(result), content_type='application/json')
     elif request.method == 'GET':
         context = dict()
-        context['menu'] = {ft_obj.name: [{'name': fo_obj.name, 'price': fo_obj.price, 'img': fo_obj.image,
+        context['menu'] = {ft_obj.name: [{'id': fo_obj.id, 'name': fo_obj.name, 'price': fo_obj.price, 'img': fo_obj.image,
                                           'describe': fo_obj.describe}
                                          for fo_obj in models.Food.objects.filter(type=ft_obj.id, available=1)]
                            for ft_obj in models.FoodType.objects.all()}
@@ -96,7 +96,7 @@ def update_food(request):
             food_obj.image = val['image']
             food_obj.available = True if val['available'] == 'True' else False
             food_obj.save()
-        return HttpResponseRedirect('/foreground/food/')
+        return HttpResponse(str({"status": "success"}).replace("'", '"'), content_type='application/json')
 
 
 def sale(request):
