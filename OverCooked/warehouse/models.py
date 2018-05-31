@@ -37,6 +37,7 @@ class Junk(models.Model):
 
 class Purchase(models.Model):
     date = models.DateTimeField(auto_now_add=True)
+    term = models.DateTimeField(null=True)
     person = models.ForeignKey('personnel.Employee', on_delete=models.CASCADE)
     supplier = models.ForeignKey('Supplier', on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=8, decimal_places=2)
