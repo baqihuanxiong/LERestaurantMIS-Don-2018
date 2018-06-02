@@ -41,6 +41,7 @@ class Purchase(models.Model):
     person = models.ForeignKey('personnel.Employee', on_delete=models.CASCADE)
     supplier = models.ForeignKey('Supplier', on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=8, decimal_places=2)
+    method = models.CharField(max_length=16, null=True)
     paid = models.BooleanField(default=False)
     received = models.BooleanField(default=False)
 

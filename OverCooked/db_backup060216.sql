@@ -82,7 +82,7 @@ CREATE TABLE `auth_permission` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `auth_permission_content_type_id_codename_01ab375a_uniq` (`content_type_id`,`codename`),
   CONSTRAINT `auth_permission_content_type_id_2f476e4b_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -91,7 +91,7 @@ CREATE TABLE `auth_permission` (
 
 LOCK TABLES `auth_permission` WRITE;
 /*!40000 ALTER TABLE `auth_permission` DISABLE KEYS */;
-INSERT INTO `auth_permission` VALUES (1,'Can add log entry',1,'add_logentry'),(2,'Can change log entry',1,'change_logentry'),(3,'Can delete log entry',1,'delete_logentry'),(4,'Can add permission',2,'add_permission'),(5,'Can change permission',2,'change_permission'),(6,'Can delete permission',2,'delete_permission'),(7,'Can add group',3,'add_group'),(8,'Can change group',3,'change_group'),(9,'Can delete group',3,'delete_group'),(10,'Can add user',4,'add_user'),(11,'Can change user',4,'change_user'),(12,'Can delete user',4,'delete_user'),(13,'Can add content type',5,'add_contenttype'),(14,'Can change content type',5,'change_contenttype'),(15,'Can delete content type',5,'delete_contenttype'),(16,'Can add session',6,'add_session'),(17,'Can change session',6,'change_session'),(18,'Can delete session',6,'delete_session'),(19,'Can add food_ class',7,'add_food_class'),(20,'Can change food_ class',7,'change_food_class'),(21,'Can delete food_ class',7,'delete_food_class'),(22,'Can add food',8,'add_food'),(23,'Can change food',8,'change_food'),(24,'Can delete food',8,'delete_food'),(25,'Can add food type',9,'add_foodtype'),(26,'Can change food type',9,'change_foodtype'),(27,'Can delete food type',9,'delete_foodtype'),(28,'Can add food',10,'add_food'),(29,'Can change food',10,'change_food'),(30,'Can delete food',10,'delete_food'),(31,'Can add order',11,'add_order'),(32,'Can change order',11,'change_order'),(33,'Can delete order',11,'delete_order'),(34,'Can add detail',12,'add_detail'),(35,'Can change detail',12,'change_detail'),(36,'Can delete detail',12,'delete_detail'),(37,'Can add station',13,'add_station'),(38,'Can change station',13,'change_station'),(39,'Can delete station',13,'delete_station'),(40,'Can add employee',14,'add_employee'),(41,'Can change employee',14,'change_employee'),(42,'Can delete employee',14,'delete_employee'),(43,'Can add distribute',15,'add_distribute'),(44,'Can change distribute',15,'change_distribute'),(45,'Can delete distribute',15,'delete_distribute'),(46,'Can add job',16,'add_job'),(47,'Can change job',16,'change_job'),(48,'Can delete job',16,'delete_job'),(49,'Can add capacity',17,'add_capacity'),(50,'Can change capacity',17,'change_capacity'),(51,'Can delete capacity',17,'delete_capacity'),(52,'Can add prepare',18,'add_prepare'),(53,'Can change prepare',18,'change_prepare'),(54,'Can delete prepare',18,'delete_prepare');
+INSERT INTO `auth_permission` VALUES (1,'Can add log entry',1,'add_logentry'),(2,'Can change log entry',1,'change_logentry'),(3,'Can delete log entry',1,'delete_logentry'),(4,'Can add permission',2,'add_permission'),(5,'Can change permission',2,'change_permission'),(6,'Can delete permission',2,'delete_permission'),(7,'Can add group',3,'add_group'),(8,'Can change group',3,'change_group'),(9,'Can delete group',3,'delete_group'),(10,'Can add user',4,'add_user'),(11,'Can change user',4,'change_user'),(12,'Can delete user',4,'delete_user'),(13,'Can add content type',5,'add_contenttype'),(14,'Can change content type',5,'change_contenttype'),(15,'Can delete content type',5,'delete_contenttype'),(16,'Can add session',6,'add_session'),(17,'Can change session',6,'change_session'),(18,'Can delete session',6,'delete_session'),(19,'Can add food_ class',7,'add_food_class'),(20,'Can change food_ class',7,'change_food_class'),(21,'Can delete food_ class',7,'delete_food_class'),(22,'Can add food',8,'add_food'),(23,'Can change food',8,'change_food'),(24,'Can delete food',8,'delete_food'),(25,'Can add food type',9,'add_foodtype'),(26,'Can change food type',9,'change_foodtype'),(27,'Can delete food type',9,'delete_foodtype'),(28,'Can add food',10,'add_food'),(29,'Can change food',10,'change_food'),(30,'Can delete food',10,'delete_food'),(31,'Can add order',11,'add_order'),(32,'Can change order',11,'change_order'),(33,'Can delete order',11,'delete_order'),(34,'Can add detail',12,'add_detail'),(35,'Can change detail',12,'change_detail'),(36,'Can delete detail',12,'delete_detail'),(37,'Can add station',13,'add_station'),(38,'Can change station',13,'change_station'),(39,'Can delete station',13,'delete_station'),(40,'Can add employee',14,'add_employee'),(41,'Can change employee',14,'change_employee'),(42,'Can delete employee',14,'delete_employee'),(43,'Can add distribute',15,'add_distribute'),(44,'Can change distribute',15,'change_distribute'),(45,'Can delete distribute',15,'delete_distribute'),(46,'Can add job',16,'add_job'),(47,'Can change job',16,'change_job'),(48,'Can delete job',16,'delete_job'),(49,'Can add capacity',17,'add_capacity'),(50,'Can change capacity',17,'change_capacity'),(51,'Can delete capacity',17,'delete_capacity'),(52,'Can add prepare',18,'add_prepare'),(53,'Can change prepare',18,'change_prepare'),(54,'Can delete prepare',18,'delete_prepare'),(55,'Can add junk',19,'add_junk'),(56,'Can change junk',19,'change_junk'),(57,'Can delete junk',19,'delete_junk'),(58,'Can add entry',20,'add_entry'),(59,'Can change entry',20,'change_entry'),(60,'Can delete entry',20,'delete_entry'),(61,'Can add material',21,'add_material'),(62,'Can change material',21,'change_material'),(63,'Can delete material',21,'delete_material'),(64,'Can add bom',22,'add_bom'),(65,'Can change bom',22,'change_bom'),(66,'Can delete bom',22,'delete_bom'),(67,'Can add entry sheet',23,'add_entrysheet'),(68,'Can change entry sheet',23,'change_entrysheet'),(69,'Can delete entry sheet',23,'delete_entrysheet'),(70,'Can add storage',24,'add_storage'),(71,'Can change storage',24,'change_storage'),(72,'Can delete storage',24,'delete_storage'),(73,'Can add purchase',25,'add_purchase'),(74,'Can change purchase',25,'change_purchase'),(75,'Can delete purchase',25,'delete_purchase'),(76,'Can add delivery sheet',26,'add_deliverysheet'),(77,'Can change delivery sheet',26,'change_deliverysheet'),(78,'Can delete delivery sheet',26,'delete_deliverysheet'),(79,'Can add delivery',27,'add_delivery'),(80,'Can change delivery',27,'change_delivery'),(81,'Can delete delivery',27,'delete_delivery'),(82,'Can add supplier',28,'add_supplier'),(83,'Can change supplier',28,'change_supplier'),(84,'Can delete supplier',28,'delete_supplier'),(85,'Can add delivery detail',23,'add_deliverydetail'),(86,'Can change delivery detail',23,'change_deliverydetail'),(87,'Can delete delivery detail',23,'delete_deliverydetail'),(88,'Can add entry detail',26,'add_entrydetail'),(89,'Can change entry detail',26,'change_entrydetail'),(90,'Can delete entry detail',26,'delete_entrydetail'),(91,'Can add purchase detail',29,'add_purchasedetail'),(92,'Can change purchase detail',29,'change_purchasedetail'),(93,'Can delete purchase detail',29,'delete_purchasedetail');
 /*!40000 ALTER TABLE `auth_permission` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -232,7 +232,7 @@ CREATE TABLE `django_content_type` (
   `model` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `django_content_type_app_label_model_76bd3d3b_uniq` (`app_label`,`model`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -241,7 +241,7 @@ CREATE TABLE `django_content_type` (
 
 LOCK TABLES `django_content_type` WRITE;
 /*!40000 ALTER TABLE `django_content_type` DISABLE KEYS */;
-INSERT INTO `django_content_type` VALUES (1,'admin','logentry'),(3,'auth','group'),(2,'auth','permission'),(4,'auth','user'),(5,'contenttypes','contenttype'),(12,'foreground','detail'),(10,'foreground','food'),(9,'foreground','foodtype'),(11,'foreground','order'),(17,'kitchen','capacity'),(18,'kitchen','prepare'),(13,'kitchen','station'),(8,'mis','food'),(7,'mis','food_class'),(15,'personnel','distribute'),(14,'personnel','employee'),(16,'personnel','job'),(6,'sessions','session');
+INSERT INTO `django_content_type` VALUES (1,'admin','logentry'),(3,'auth','group'),(2,'auth','permission'),(4,'auth','user'),(5,'contenttypes','contenttype'),(12,'foreground','detail'),(10,'foreground','food'),(9,'foreground','foodtype'),(11,'foreground','order'),(17,'kitchen','capacity'),(18,'kitchen','prepare'),(13,'kitchen','station'),(8,'mis','food'),(7,'mis','food_class'),(15,'personnel','distribute'),(14,'personnel','employee'),(16,'personnel','job'),(6,'sessions','session'),(22,'warehouse','bom'),(27,'warehouse','delivery'),(23,'warehouse','deliverydetail'),(20,'warehouse','entry'),(26,'warehouse','entrydetail'),(19,'warehouse','junk'),(21,'warehouse','material'),(25,'warehouse','purchase'),(29,'warehouse','purchasedetail'),(24,'warehouse','storage'),(28,'warehouse','supplier');
 /*!40000 ALTER TABLE `django_content_type` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -258,7 +258,7 @@ CREATE TABLE `django_migrations` (
   `name` varchar(255) NOT NULL,
   `applied` datetime(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -267,7 +267,7 @@ CREATE TABLE `django_migrations` (
 
 LOCK TABLES `django_migrations` WRITE;
 /*!40000 ALTER TABLE `django_migrations` DISABLE KEYS */;
-INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2018-04-08 12:35:25.998269'),(2,'auth','0001_initial','2018-04-08 12:35:27.078781'),(3,'admin','0001_initial','2018-04-08 12:35:27.345429'),(4,'admin','0002_logentry_remove_auto_add','2018-04-08 12:35:27.356436'),(5,'contenttypes','0002_remove_content_type_name','2018-04-08 12:35:27.547019'),(6,'auth','0002_alter_permission_name_max_length','2018-04-08 12:35:27.645423'),(7,'auth','0003_alter_user_email_max_length','2018-04-08 12:35:27.741942'),(8,'auth','0004_alter_user_username_opts','2018-04-08 12:35:27.754814'),(9,'auth','0005_alter_user_last_login_null','2018-04-08 12:35:27.839745'),(10,'auth','0006_require_contenttypes_0002','2018-04-08 12:35:27.844249'),(11,'auth','0007_alter_validators_add_error_messages','2018-04-08 12:35:27.855258'),(12,'auth','0008_alter_user_username_max_length','2018-04-08 12:35:28.032080'),(13,'auth','0009_alter_user_last_name_max_length','2018-04-08 12:35:28.122704'),(14,'sessions','0001_initial','2018-04-08 12:35:28.193062'),(15,'mis','0001_initial','2018-04-16 14:21:18.684138'),(16,'foreground','0001_initial','2018-05-07 15:33:44.062049'),(17,'foreground','0002_auto_20180507_2336','2018-05-07 15:36:34.050516'),(18,'foreground','0003_auto_20180508_1726','2018-05-08 09:26:25.169797'),(19,'foreground','0004_remove_order_foods','2018-05-08 09:28:31.509515'),(20,'foreground','0005_auto_20180508_2132','2018-05-08 13:32:58.096176'),(21,'foreground','0006_auto_20180514_1111','2018-05-14 03:11:12.956456'),(22,'personnel','0001_initial','2018-05-14 05:29:31.623095'),(23,'kitchen','0001_initial','2018-05-14 05:29:31.834701'),(24,'kitchen','0002_auto_20180514_1335','2018-05-14 05:35:57.006914'),(25,'personnel','0002_auto_20180514_2040','2018-05-14 12:40:48.856733'),(26,'foreground','0007_food_available','2018-05-14 13:34:33.565252'),(27,'kitchen','0003_prepare','2018-05-16 00:30:05.947412'),(28,'kitchen','0004_auto_20180516_0930','2018-05-16 01:30:10.182684'),(29,'foreground','0008_detail_station','2018-05-16 01:46:14.412033'),(30,'kitchen','0005_auto_20180516_0949','2018-05-16 01:49:10.768618'),(31,'foreground','0009_auto_20180520_0225','2018-05-19 18:26:16.117562'),(32,'foreground','0010_auto_20180521_2326','2018-05-21 15:26:12.179915'),(33,'foreground','0011_auto_20180527_1507','2018-05-27 15:07:33.059364'),(34,'foreground','0012_food_score','2018-05-27 22:10:42.349687');
+INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2018-04-08 12:35:25.998269'),(2,'auth','0001_initial','2018-04-08 12:35:27.078781'),(3,'admin','0001_initial','2018-04-08 12:35:27.345429'),(4,'admin','0002_logentry_remove_auto_add','2018-04-08 12:35:27.356436'),(5,'contenttypes','0002_remove_content_type_name','2018-04-08 12:35:27.547019'),(6,'auth','0002_alter_permission_name_max_length','2018-04-08 12:35:27.645423'),(7,'auth','0003_alter_user_email_max_length','2018-04-08 12:35:27.741942'),(8,'auth','0004_alter_user_username_opts','2018-04-08 12:35:27.754814'),(9,'auth','0005_alter_user_last_login_null','2018-04-08 12:35:27.839745'),(10,'auth','0006_require_contenttypes_0002','2018-04-08 12:35:27.844249'),(11,'auth','0007_alter_validators_add_error_messages','2018-04-08 12:35:27.855258'),(12,'auth','0008_alter_user_username_max_length','2018-04-08 12:35:28.032080'),(13,'auth','0009_alter_user_last_name_max_length','2018-04-08 12:35:28.122704'),(14,'sessions','0001_initial','2018-04-08 12:35:28.193062'),(15,'mis','0001_initial','2018-04-16 14:21:18.684138'),(16,'foreground','0001_initial','2018-05-07 15:33:44.062049'),(17,'foreground','0002_auto_20180507_2336','2018-05-07 15:36:34.050516'),(18,'foreground','0003_auto_20180508_1726','2018-05-08 09:26:25.169797'),(19,'foreground','0004_remove_order_foods','2018-05-08 09:28:31.509515'),(20,'foreground','0005_auto_20180508_2132','2018-05-08 13:32:58.096176'),(21,'foreground','0006_auto_20180514_1111','2018-05-14 03:11:12.956456'),(22,'personnel','0001_initial','2018-05-14 05:29:31.623095'),(23,'kitchen','0001_initial','2018-05-14 05:29:31.834701'),(24,'kitchen','0002_auto_20180514_1335','2018-05-14 05:35:57.006914'),(25,'personnel','0002_auto_20180514_2040','2018-05-14 12:40:48.856733'),(26,'foreground','0007_food_available','2018-05-14 13:34:33.565252'),(27,'kitchen','0003_prepare','2018-05-16 00:30:05.947412'),(28,'kitchen','0004_auto_20180516_0930','2018-05-16 01:30:10.182684'),(29,'foreground','0008_detail_station','2018-05-16 01:46:14.412033'),(30,'kitchen','0005_auto_20180516_0949','2018-05-16 01:49:10.768618'),(31,'foreground','0009_auto_20180520_0225','2018-05-19 18:26:16.117562'),(32,'foreground','0010_auto_20180521_2326','2018-05-21 15:26:12.179915'),(33,'foreground','0011_auto_20180527_1507','2018-05-27 15:07:33.059364'),(34,'foreground','0012_food_score','2018-05-27 22:10:42.349687'),(37,'warehouse','0001_initial','2018-05-29 18:10:46.202131'),(38,'foreground','0013_food_material','2018-05-29 18:10:46.233399'),(39,'warehouse','0002_auto_20180529_1813','2018-05-29 18:13:34.544095'),(40,'warehouse','0003_purchasedetail_left','2018-05-29 20:24:27.865922'),(41,'personnel','0003_employee_account','2018-05-30 12:07:31.758286'),(42,'warehouse','0004_auto_20180530_2005','2018-05-30 20:06:01.263496'),(43,'warehouse','0005_purchase_term','2018-05-30 23:33:27.226431'),(44,'warehouse','0006_purchase_method','2018-06-01 18:12:03.856831');
 /*!40000 ALTER TABLE `django_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -359,7 +359,7 @@ CREATE TABLE `foreground_food` (
 
 LOCK TABLES `foreground_food` WRITE;
 /*!40000 ALTER TABLE `foreground_food` DISABLE KEYS */;
-INSERT INTO `foreground_food` VALUES (1,'鱼香肉丝','','/static/img/noimg.jpg',11.50,2,1,0),(2,'宫保鸡丁','','/static/img/noimg.jpg',12.50,2,1,0),(3,'鸭血汤','','/static/img/noimg.jpg',9.00,1,1,0),(4,'红烧肉','','/static/img/noimg.jpg',18.00,3,1,0),(5,'腊鸡腿','','/static/img/noimg.jpg',12.50,3,1,0),(6,'米饭','','/static/img/noimg.jpg',1.00,5,1,0),(7,'番茄炒蛋','','/static/img/noimg.jpg',8.50,2,1,0),(8,'凉拌干丝','','/static/img/noimg.jpg',7.50,4,1,0),(9,'番茄鸡蛋面','','/static/img/noimg.jpg',10.50,6,1,0),(10,'白斩鸡（中）','','/static/img/noimg.jpg',16.80,4,1,0),(11,'白斩鸡（大）','','/static/img/noimg.jpg',19.80,4,1,0),(12,'虎皮尖椒','','/static/img/noimg.jpg',7.80,2,1,0),(13,'小笼包','','/static/img/noimg.jpg',11.00,7,1,0),(14,'土豆焖饭','','/static/img/noimg.jpg',17.00,5,1,0),(15,'蛋包饭','','/static/img/noimg.jpg',16.50,5,1,0),(16,'咖喱饭','','/static/img/noimg.jpg',17.80,5,1,0),(17,'蒸水蛋','','/static/img/noimg.jpg',7.00,3,1,0),(18,'腊肠鸡蛋煎饼','','/static/img/noimg.jpg',6.00,7,1,0),(19,'菌汤面','','/static/img/noimg.jpg',12.50,6,1,0);
+INSERT INTO `foreground_food` VALUES (1,'鱼香肉丝','','',13.50,2,1,0),(2,'宫保鸡丁','','',13.50,2,1,0),(3,'鸭血汤','','',9.00,1,1,0),(4,'红烧肉','','',18.00,3,1,0),(5,'腊鸡腿','','',12.50,3,1,0),(6,'米饭','','',1.00,5,1,0),(7,'番茄炒蛋','','',8.50,2,1,0),(8,'凉拌干丝','','',7.50,4,1,0),(9,'番茄鸡蛋面','','',10.50,6,1,0),(10,'白斩鸡（中）','','',16.80,4,1,0),(11,'白斩鸡（大）','','',19.80,4,1,0),(12,'虎皮尖椒','','',7.80,2,1,0),(13,'小笼包','','',11.00,7,1,0),(14,'土豆焖饭','','',17.00,5,1,0),(15,'蛋包饭','','',16.50,5,1,0),(16,'咖喱饭','','',17.80,5,1,0),(17,'蒸水蛋','','',7.00,3,1,0),(18,'腊肠鸡蛋煎饼','','',6.00,7,1,0),(19,'菌汤面','','',12.50,6,1,0);
 /*!40000 ALTER TABLE `foreground_food` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -546,7 +546,10 @@ CREATE TABLE `personnel_employee` (
   `phone` varchar(16) NOT NULL,
   `performance` int(11) DEFAULT NULL,
   `salary` decimal(16,2) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `account_id` int(11),
+  PRIMARY KEY (`id`),
+  KEY `personnel_employee_account_id_5c4e7b1b_fk_auth_user_id` (`account_id`),
+  CONSTRAINT `personnel_employee_account_id_5c4e7b1b_fk_auth_user_id` FOREIGN KEY (`account_id`) REFERENCES `auth_user` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -556,7 +559,7 @@ CREATE TABLE `personnel_employee` (
 
 LOCK TABLES `personnel_employee` WRITE;
 /*!40000 ALTER TABLE `personnel_employee` DISABLE KEYS */;
-INSERT INTO `personnel_employee` VALUES (1,'林深','00000000',NULL,NULL),(2,'沈立文','00000000',NULL,NULL),(3,'赵一桐','00000000',NULL,NULL);
+INSERT INTO `personnel_employee` VALUES (1,'林深','00000000',NULL,NULL,3),(2,'沈立文','00000000',NULL,NULL,1),(3,'赵一桐','00000000',NULL,NULL,3);
 /*!40000 ALTER TABLE `personnel_employee` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -584,6 +587,328 @@ LOCK TABLES `personnel_job` WRITE;
 INSERT INTO `personnel_job` VALUES (1,'厨师',NULL),(2,'经理',NULL);
 /*!40000 ALTER TABLE `personnel_job` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `warehouse_bom`
+--
+
+DROP TABLE IF EXISTS `warehouse_bom`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `warehouse_bom` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `num` int(11) NOT NULL,
+  `food_id` int(11) NOT NULL,
+  `material_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `warehouse_bom_food_id_ccbff186_fk_foreground_food_id` (`food_id`),
+  KEY `warehouse_bom_material_id_322d6cad_fk_warehouse_material_id` (`material_id`),
+  CONSTRAINT `warehouse_bom_food_id_ccbff186_fk_foreground_food_id` FOREIGN KEY (`food_id`) REFERENCES `foreground_food` (`id`),
+  CONSTRAINT `warehouse_bom_material_id_322d6cad_fk_warehouse_material_id` FOREIGN KEY (`material_id`) REFERENCES `warehouse_material` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `warehouse_bom`
+--
+
+LOCK TABLES `warehouse_bom` WRITE;
+/*!40000 ALTER TABLE `warehouse_bom` DISABLE KEYS */;
+/*!40000 ALTER TABLE `warehouse_bom` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `warehouse_delivery`
+--
+
+DROP TABLE IF EXISTS `warehouse_delivery`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `warehouse_delivery` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` datetime(6) NOT NULL,
+  `person_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `warehouse_delivery_person_id_060fa1db_fk_personnel_employee_id` (`person_id`),
+  CONSTRAINT `warehouse_delivery_person_id_060fa1db_fk_personnel_employee_id` FOREIGN KEY (`person_id`) REFERENCES `personnel_employee` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `warehouse_delivery`
+--
+
+LOCK TABLES `warehouse_delivery` WRITE;
+/*!40000 ALTER TABLE `warehouse_delivery` DISABLE KEYS */;
+INSERT INTO `warehouse_delivery` VALUES (1,'2018-06-02 16:02:55.380137',2);
+/*!40000 ALTER TABLE `warehouse_delivery` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `warehouse_deliverydetail`
+--
+
+DROP TABLE IF EXISTS `warehouse_deliverydetail`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `warehouse_deliverydetail` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `num` int(11) NOT NULL,
+  `material_id` int(11) NOT NULL,
+  `delivery_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `warehouse_deliveryde_material_id_b2db0f64_fk_warehouse` (`material_id`),
+  KEY `warehouse_deliveryde_delivery_id_d4ead4b3_fk_warehouse` (`delivery_id`),
+  CONSTRAINT `warehouse_deliveryde_delivery_id_d4ead4b3_fk_warehouse` FOREIGN KEY (`delivery_id`) REFERENCES `warehouse_delivery` (`id`),
+  CONSTRAINT `warehouse_deliveryde_material_id_b2db0f64_fk_warehouse` FOREIGN KEY (`material_id`) REFERENCES `warehouse_material` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `warehouse_deliverydetail`
+--
+
+LOCK TABLES `warehouse_deliverydetail` WRITE;
+/*!40000 ALTER TABLE `warehouse_deliverydetail` DISABLE KEYS */;
+INSERT INTO `warehouse_deliverydetail` VALUES (1,100,9,1),(2,100,10,1),(3,200,2,1);
+/*!40000 ALTER TABLE `warehouse_deliverydetail` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `warehouse_entry`
+--
+
+DROP TABLE IF EXISTS `warehouse_entry`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `warehouse_entry` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` datetime(6) NOT NULL,
+  `person_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `warehouse_entry_person_id_6ee6d811_fk_personnel_employee_id` (`person_id`),
+  CONSTRAINT `warehouse_entry_person_id_6ee6d811_fk_personnel_employee_id` FOREIGN KEY (`person_id`) REFERENCES `personnel_employee` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `warehouse_entry`
+--
+
+LOCK TABLES `warehouse_entry` WRITE;
+/*!40000 ALTER TABLE `warehouse_entry` DISABLE KEYS */;
+INSERT INTO `warehouse_entry` VALUES (1,'2018-05-30 19:24:59.352642',2),(2,'2018-05-30 23:08:22.519395',2);
+/*!40000 ALTER TABLE `warehouse_entry` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `warehouse_entrydetail`
+--
+
+DROP TABLE IF EXISTS `warehouse_entrydetail`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `warehouse_entrydetail` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `num` int(11) NOT NULL,
+  `material_id` int(11) NOT NULL,
+  `entry_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `warehouse_entrydetai_material_id_121f3689_fk_warehouse` (`material_id`),
+  KEY `warehouse_entrydetail_entry_id_01bccb33_fk_warehouse_entry_id` (`entry_id`),
+  CONSTRAINT `warehouse_entrydetai_material_id_121f3689_fk_warehouse` FOREIGN KEY (`material_id`) REFERENCES `warehouse_material` (`id`),
+  CONSTRAINT `warehouse_entrydetail_entry_id_01bccb33_fk_warehouse_entry_id` FOREIGN KEY (`entry_id`) REFERENCES `warehouse_entry` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `warehouse_entrydetail`
+--
+
+LOCK TABLES `warehouse_entrydetail` WRITE;
+/*!40000 ALTER TABLE `warehouse_entrydetail` DISABLE KEYS */;
+INSERT INTO `warehouse_entrydetail` VALUES (1,4,3,1),(2,5,1,1),(3,10,3,2);
+/*!40000 ALTER TABLE `warehouse_entrydetail` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `warehouse_junk`
+--
+
+DROP TABLE IF EXISTS `warehouse_junk`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `warehouse_junk` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `num` int(11) NOT NULL,
+  `reason` varchar(300) NOT NULL,
+  `date` datetime(6) NOT NULL,
+  `storage_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `warehouse_junk_storage_id_80e2f05d_fk_warehouse_storage_id` (`storage_id`),
+  CONSTRAINT `warehouse_junk_storage_id_80e2f05d_fk_warehouse_storage_id` FOREIGN KEY (`storage_id`) REFERENCES `warehouse_storage` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `warehouse_junk`
+--
+
+LOCK TABLES `warehouse_junk` WRITE;
+/*!40000 ALTER TABLE `warehouse_junk` DISABLE KEYS */;
+INSERT INTO `warehouse_junk` VALUES (1,5,'','2018-05-30 20:41:13.659726',1);
+/*!40000 ALTER TABLE `warehouse_junk` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `warehouse_material`
+--
+
+DROP TABLE IF EXISTS `warehouse_material`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `warehouse_material` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) NOT NULL,
+  `type` varchar(16) NOT NULL,
+  `unit` varchar(8) NOT NULL,
+  `gd` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `warehouse_material`
+--
+
+LOCK TABLES `warehouse_material` WRITE;
+/*!40000 ALTER TABLE `warehouse_material` DISABLE KEYS */;
+INSERT INTO `warehouse_material` VALUES (1,'鸡蛋','常温','打',30),(2,'鸡胸肉','冷冻','盒',120),(3,'大米','常温','斤',365),(4,'酱油','常温','瓶',365),(5,'食用油','常温','瓶',365),(6,'西红柿','常温','只',7),(7,'生牛排','冷冻','盒',30),(8,'猪排','冷藏','盒',12),(9,'五花肉','冷藏','盒',6),(10,'鸡腿排','冷藏','盒',6),(11,'牛腱子','冷藏','盒',12),(12,'莴笋','常温','捆',7),(13,'卷心菜','常温','只',8);
+/*!40000 ALTER TABLE `warehouse_material` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `warehouse_purchase`
+--
+
+DROP TABLE IF EXISTS `warehouse_purchase`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `warehouse_purchase` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` datetime(6) NOT NULL,
+  `price` decimal(8,2) NOT NULL,
+  `paid` tinyint(1) NOT NULL,
+  `received` tinyint(1) NOT NULL,
+  `person_id` int(11) NOT NULL,
+  `supplier_id` int(11) NOT NULL,
+  `term` datetime(6) DEFAULT NULL,
+  `method` varchar(16) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `warehouse_purchase_person_id_a67df8a7_fk_personnel_employee_id` (`person_id`),
+  KEY `warehouse_purchase_supplier_id_78d76991_fk_warehouse_supplier_id` (`supplier_id`),
+  CONSTRAINT `warehouse_purchase_person_id_a67df8a7_fk_personnel_employee_id` FOREIGN KEY (`person_id`) REFERENCES `personnel_employee` (`id`),
+  CONSTRAINT `warehouse_purchase_supplier_id_78d76991_fk_warehouse_supplier_id` FOREIGN KEY (`supplier_id`) REFERENCES `warehouse_supplier` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `warehouse_purchase`
+--
+
+LOCK TABLES `warehouse_purchase` WRITE;
+/*!40000 ALTER TABLE `warehouse_purchase` DISABLE KEYS */;
+INSERT INTO `warehouse_purchase` VALUES (3,'2018-06-01 23:40:22.814392',4500.00,0,1,2,1,'2018-06-01 19:24:59.000000','公司转账'),(6,'2018-06-02 15:50:02.992636',4500.00,0,0,2,1,'2018-06-01 19:24:59.000000','公司转账'),(7,'2018-06-02 16:02:38.673313',4500.00,0,1,2,1,'2018-06-01 19:24:59.000000','公司转账');
+/*!40000 ALTER TABLE `warehouse_purchase` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `warehouse_purchasedetail`
+--
+
+DROP TABLE IF EXISTS `warehouse_purchasedetail`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `warehouse_purchasedetail` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `price` decimal(8,2) NOT NULL,
+  `num` int(11) NOT NULL,
+  `material_id` int(11) NOT NULL,
+  `purchase_id` int(11) NOT NULL,
+  `left` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `warehouse_purchasede_material_id_588ad0ad_fk_warehouse` (`material_id`),
+  KEY `warehouse_purchasede_purchase_id_570718cf_fk_warehouse` (`purchase_id`),
+  CONSTRAINT `warehouse_purchasede_material_id_588ad0ad_fk_warehouse` FOREIGN KEY (`material_id`) REFERENCES `warehouse_material` (`id`),
+  CONSTRAINT `warehouse_purchasede_purchase_id_570718cf_fk_warehouse` FOREIGN KEY (`purchase_id`) REFERENCES `warehouse_purchase` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `warehouse_purchasedetail`
+--
+
+LOCK TABLES `warehouse_purchasedetail` WRITE;
+/*!40000 ALTER TABLE `warehouse_purchasedetail` DISABLE KEYS */;
+INSERT INTO `warehouse_purchasedetail` VALUES (4,15.00,100,9,3,0),(5,12.00,100,10,3,0),(6,9.00,200,2,3,0),(13,15.00,100,9,6,100),(14,12.00,100,10,6,100),(15,9.00,200,2,6,200),(16,15.00,100,9,7,0),(17,12.00,100,10,7,0),(18,9.00,200,2,7,0);
+/*!40000 ALTER TABLE `warehouse_purchasedetail` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `warehouse_storage`
+--
+
+DROP TABLE IF EXISTS `warehouse_storage`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `warehouse_storage` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `num` int(11) NOT NULL,
+  `md` datetime(6) NOT NULL,
+  `date` datetime(6) NOT NULL,
+  `material_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `warehouse_storage_material_id_142ecd00_fk_warehouse_material_id` (`material_id`),
+  CONSTRAINT `warehouse_storage_material_id_142ecd00_fk_warehouse_material_id` FOREIGN KEY (`material_id`) REFERENCES `warehouse_material` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `warehouse_storage`
+--
+
+LOCK TABLES `warehouse_storage` WRITE;
+/*!40000 ALTER TABLE `warehouse_storage` DISABLE KEYS */;
+INSERT INTO `warehouse_storage` VALUES (1,85,'2018-01-27 10:45:00.015311','2018-05-27 10:45:00.015311',3),(2,50,'2018-01-27 10:45:00.015311','2018-05-27 10:45:00.015311',1),(3,20,'2018-01-27 10:46:00.015311','2018-05-27 10:45:00.015311',6),(4,10,'2018-01-27 10:47:00.015311','2018-05-27 10:45:00.015311',4),(5,405,'2018-01-27 10:48:00.015311','2018-05-27 10:45:00.015311',2),(6,10,'2018-01-27 10:49:00.015311','2018-05-27 10:45:00.015311',5),(7,50,'2018-01-27 10:50:00.015311','2018-05-27 10:45:00.015311',7),(8,35,'2018-01-27 10:45:51.015311','2018-05-27 10:45:00.015311',8),(9,166,'2018-01-27 10:52:00.015311','2018-05-27 10:45:00.015311',9),(10,276,'2018-01-27 10:53:00.015311','2018-05-27 10:45:00.015311',10),(11,50,'2018-01-27 10:54:00.015311','2018-05-27 10:45:00.015311',11),(12,33,'2018-01-27 10:55:55.015311','2018-05-27 10:45:00.015311',12),(13,3,'2018-01-27 10:56:00.015311','2018-05-27 10:45:00.015311',13);
+/*!40000 ALTER TABLE `warehouse_storage` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `warehouse_supplier`
+--
+
+DROP TABLE IF EXISTS `warehouse_supplier`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `warehouse_supplier` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) NOT NULL,
+  `charger` varchar(32) NOT NULL,
+  `phone` varchar(16) NOT NULL,
+  `address` varchar(300) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `warehouse_supplier`
+--
+
+LOCK TABLES `warehouse_supplier` WRITE;
+/*!40000 ALTER TABLE `warehouse_supplier` DISABLE KEYS */;
+INSERT INTO `warehouse_supplier` VALUES (1,'煮糊了','今天天气不错','12345678','上海市浦东新区南汇新城镇海港大道1550号59号楼');
+/*!40000 ALTER TABLE `warehouse_supplier` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -594,4 +919,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-27 23:03:12
+-- Dump completed on 2018-06-02 16:08:41
