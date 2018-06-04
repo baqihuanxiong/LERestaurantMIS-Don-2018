@@ -35,6 +35,7 @@ def ordering(request):
         if result['status'] == 'success':
             order_obj = models.Order.objects.create(type=order['type'], price=order['price'], guest=order['guest'],
                                                     phone=order['phone'], address=order['address'], state='未完成')
+            result['id'] = order_obj.id
             detail_list = []
             for i in range(len(order['foods'])):
                 food_state = '未分配'
