@@ -16,9 +16,10 @@ def check_order(order):
             return {"status": "failure", "msg": "incomplete order"}
     if order['type'] == '配送' and not (order['guest'] and order['phone'] and order['address']):
         return {"status": "failure", "msg": "incomplete order"}
+
     foods_ids = [food.id for food in models.Food.objects.all()]
     for food in order['foods']:
-        if food not in foods_ids:
+        if int(food) not in foods_ids:
             return {"status": "failure", "msg": "invalid food"}
         if not models.Food.objects.get(id=food).available:
             return {"status": "failure", "msg": "food unavailable"}
@@ -31,6 +32,7 @@ def check_order(order):
 def ordering(request):
     if request.method == 'POST':
         order = json.loads(request.body.decode('utf-8'))
+        print(order)
         result = check_order(order)
         if result['status'] == 'success':
             order_obj = models.Order.objects.create(type=order['type'], price=order['price'], guest=order['guest'],
@@ -54,10 +56,10 @@ def ordering(request):
             distr_ga = GA()
             distr_ga.calculate()
             distr_ga.save()
-        return HttpResponse(str(result), content_type='application/json')
+        return HttpResponse(str(result).replace("'", '"'), content_type='application/json')
     elif request.method == 'GET':
         context = dict()
-        context['menu'] = {ft_obj.name: [{'id': fo_obj.id, 'name': fo_obj.name, 'price': fo_obj.price, 'img': fo_obj.image,
+        context['menu'] = {ft_obj.name: [{'id': fo_obj.id, 'name': fo_obj.name, 'price': str(fo_obj.price), 'img': fo_obj.image,
                                           'describe': fo_obj.describe}
                                          for fo_obj in models.Food.objects.filter(type=ft_obj.id, available=1)]
                            for ft_obj in models.FoodType.objects.all()}
