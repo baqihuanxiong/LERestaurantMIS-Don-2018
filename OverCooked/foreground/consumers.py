@@ -22,7 +22,7 @@ class OrderConsumer(WebsocketConsumer):
             for order in Order.objects.filter(state='未完成'):
                 message.append({"order_id": order.id, "type": order.type, "price": str(order.price), "guest": order.guest,
                                 "phone": order.phone, "address": order.address,
-                                "date": order.date.strftime('%Y-%M-%D %H:%M:%S'),
+                                "date": order.date.strftime('%Y-%m-%d %H:%M:%S'),
                                 "foods": [food.name for food in order.foods.all()]})
             self.send(text_data=json.dumps({
                 'message': message
